@@ -1,0 +1,26 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*************** Variabler  *********************/
+:root {
+  --darkgreen: #426747;
+  --red: #7e2121;
+  --beige: #ffe9cb;
+  --lightgreen: #bbc2a1;
+  --white: #fff8f2;
+
+  --font-family-h1: "Kalam", sans-serif;
+  --font-family-h2: "Kalam", sans-serif;
+  --font-family-p: "sans-serif";
+}
+
