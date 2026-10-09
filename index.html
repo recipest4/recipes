@@ -4,16 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+    
+    <script src="menu.js" defer></script>
+    <script src="index.js" defer></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 
 <body>
-   
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt=" Cooklikeme">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html" class="active">Home</a></li>
 
+                <li class="dropdown">
+                    <a href="opskriftliste.html">All recipes</a>
+
+                    <ul class="dropdown-menu">
+                        <li>Easy recipes</li>
+                        <li>Salads</li>
+                        <li>Veggie</li>
+                        <li>Protein focused recipes</li>
+                        <li>Pasta recipes</li>
+                        <li>Cheap recipes</li>
+                    </ul>
+                </li>
+
+                <li><a href="opskrift.html">Recipe</a></li>
+            </ul>
+            <button class="burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+
+                <h2>Om os</h2>
+
+                <p>
+                    Vi laver madopskrifter og måltidskasser, som passer til din hverdag
+                    og dine behov. Her finder du alt fra billige løsninger til hurtige
+                    madprojekter, så du kan have mad på bordet hver dag.
+                </p>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <h2>Kontakt os</h2>
+                <p>Mail: Cooklikeme@outlook.dk</p>
+                <p>Telefon: +45 67687645</p>
+                <p>CVR: 10126759</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
