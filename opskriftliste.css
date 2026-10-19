@@ -1,0 +1,210 @@
+/* ---------- Variabler ---------- */
+:root {
+  --green: #4a6745;
+  --cream: #fdf7f1;
+  --card: #fbe8cc;
+  --maroon: #7a2c2c;
+  --text: #1d1d1d;
+  --radius: 10px;
+  --gap: 1.25rem;
+}
+
+/* ---------- Reset / base (mobile first) ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0.5rem;
+  background: var(--cream);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  color: inherit;
+}
+
+/* ---------- Header ---------- */
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.75rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Burger */
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 1.6rem;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.burger span {
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition:
+    transform 0.25s,
+    opacity 0.25s;
+}
+.burger[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(0.65rem) rotate(45deg);
+}
+.burger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.burger[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-0.65rem) rotate(-45deg);
+}
+
+/* Mobil-menu*/
+.nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--green);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+.nav.open {
+  display: flex;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  font-weight: 500;
+}
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Titel ---------- */
+.page-title {
+  margin: 3rem 0 2rem;
+  text-align: center;
+  line-height: 1;
+}
+.title-main {
+  font-family: "Kaushan Script", cursive;
+  font-size: 3.25rem;
+  color: var(--maroon);
+}
+.title-sub {
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+  color: var(--green);
+  margin-left: 0.25rem;
+}
+
+/* ---------- Opskriftsgrid (1 kolonne på mobil) ---------- */
+.recipe-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+  align-content: start;
+}
+
+.status {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text);
+}
+.recipe-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.recipe-card h2 {
+  margin: 0;
+  padding: 0.75rem 1rem 1rem;
+  font-family: "Merriweather", serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  min-height: 3.5rem;
+}
+.recipe-card:focus-visible,
+.burger:focus-visible,
+.nav a:focus-visible {
+  outline: 3px solid var(--maroon);
+  outline-offset: 3px;
+}
+/* ---------- desktop ---------- */
+@media (min-width: 768px) {
+  body {
+    padding: 0.75rem;
+  }
+
+  .logo {
+    font-size: 2.25rem;
+  }
+
+  .burger {
+    display: none;
+  }
+  .nav {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0;
+    background: none;
+  }
+
+  .title-main {
+    font-size: 5rem;
+  }
+  .title-sub {
+    font-size: 3rem;
+  }
+
+  .recipe-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
