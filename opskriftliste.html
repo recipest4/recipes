@@ -10,51 +10,77 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500&family=Kaushan+Script&family=Merriweather:wght@400;700&family=Playfair+Display:ital,wght@1,600&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="opskriftliste.css">
 </head>
 
 <body>
-    <header class="site-header">
+    <header>
         <div class="logo">
             <a href="index.html">
                 <img src="logo.png" alt=" Cooklikeme">
             </a>
         </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html" class="active">Home</a></li>
 
-        <button class="burger" id="burger" aria-label="Åbn menu" aria-expanded="false" aria-controls="nav">
-            <span></span><span></span><span></span>
-        </button>
+                <li class="dropdown">
+                    <a href="opskriftliste.html">All recipes</a>
 
-        <nav class="nav" id="nav">
-            <a href="index.html">Home</a>
-            <a href="opskriftliste.html">All recipes</a>
-            <a href="opskrift.html">Recipe</a>
+                    <ul class="dropdown-menu">
+                        <li>Easy recipes</li>
+                        <li>Salads</li>
+                        <li>Veggies</li>
+                        <li>Protein focused recipes</li>
+                        <li>Pasta recipes</li>
+                        <li>Cheap recipes</li>
+                    </ul>
+                </li>
+
+                <li><a href="opskrift.html">Recipe</a></li>
+            </ul>
+            <button class="burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
         </nav>
     </header>
 
     <main>
         <h1 class="page-title">
             <span class="title-main">Recipes</span>
-            <span class="title-sub">cheap</span>
         </h1>
 
         <section class="recipe-grid" id="recipe-grid" aria-live="polite">
             <p class="status">Henter opskrifter …</p>
         </section>
     </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
 
-    <footer class="site-footer">
-        <div class="footer-col">
-            <h2>om os</h2>
-            <p>vi laver mad opskrifter og måltidskasser som passer til din hverdag og dinne krav. her finder du alt fra
-                billige løsninger til hurtige mad projekter, som sørger for du har mad på bordet hver dag.</p>
-        </div>
-        <div class="footer-col">
-            <h2>kontakt os</h2>
-            <p>mail: <a href="mailto:Easykitchen@outlook.dk">Easykitchen@outlook.dk</a></p>
-            <p>telefon: <a href="tel:+4567687645">+45 67687645</a></p>
-            <p>cvr: <strong>10126759</strong></p>
+                <h2>About us</h2>
+
+                <p>
+                    We create recipes and meal kits that fit your everyday life and your needs. Here, you'll find
+                    everything from
+                    budget-friendly meals to quick and easy recipes, helping you put food on the table every day.
+                </p>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <h2>Contact us</h2>
+                <p>E-mail: Cooklikeme@outlook.dk</p>
+                <p>Phone: +45 67687645</p>
+                <p>CVR: 10126759</p>
+            </div>
         </div>
     </footer>
 
