@@ -6,7 +6,7 @@ const MAX_RECIPES = 6;
 const API_URL = `https://dummyjson.com/recipes?limit=${MAX_RECIPES}`;
 const nav = document.getElementById("nav");
 
-/* --------JSON-------- */
+/* --------- JSON --------- */
 async function loadRecipes() {
   try {
     const res = await fetch(API_URL);

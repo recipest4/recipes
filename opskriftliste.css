@@ -1,108 +1,12 @@
 /* ---------- Variabler ---------- */
 :root {
   --green: #4a6745;
-  --cream: #fdf7f1;
+  --cream: #ffe9cb;
   --card: #fbe8cc;
   --maroon: #7a2c2c;
   --text: #1d1d1d;
   --radius: 10px;
   --gap: 1.25rem;
-}
-
-/* ---------- Reset / base (mobile first) ---------- */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0.5rem;
-  background: var(--cream);
-  color: var(--text);
-  font-family: "Inter", sans-serif;
-  line-height: 1.5;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-a {
-  color: inherit;
-}
-
-/* ---------- Header ---------- */
-
-.logo {
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-weight: 600;
-  font-size: 1.75rem;
-  text-decoration: none;
-  color: #fff;
-}
-
-/* Burger */
-.burger {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 2.25rem;
-  height: 1.6rem;
-  padding: 0;
-  background: none;
-  border: 0;
-  cursor: pointer;
-}
-.burger span {
-  height: 3px;
-  width: 100%;
-  background: #fff;
-  border-radius: 2px;
-  transition:
-    transform 0.25s,
-    opacity 0.25s;
-}
-.burger[aria-expanded="true"] span:nth-child(1) {
-  transform: translateY(0.65rem) rotate(45deg);
-}
-.burger[aria-expanded="true"] span:nth-child(2) {
-  opacity: 0;
-}
-.burger[aria-expanded="true"] span:nth-child(3) {
-  transform: translateY(-0.65rem) rotate(-45deg);
-}
-
-/* Mobil-menu*/
-.nav {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  flex-direction: column;
-  gap: 0.25rem;
-  padding: 1rem 1.25rem;
-  background: var(--green);
-  border-radius: 0 0 var(--radius) var(--radius);
-}
-.nav.open {
-  display: flex;
-}
-.nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0.5rem 0;
-  font-weight: 500;
-}
-.nav a:hover {
-  text-decoration: underline;
 }
 
 /* ---------- Titel ---------- */
@@ -112,15 +16,11 @@ a {
   line-height: 1;
 }
 .title-main {
-  font-family: "Kaushan Script", cursive;
-  font-size: 3.25rem;
+  font-family: "Kalam", sans-serif;
   color: var(--maroon);
-}
-.title-sub {
-  font-family: "Caveat", cursive;
-  font-size: 2rem;
-  color: var(--green);
-  margin-left: 0.25rem;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 35px;
 }
 
 /* ---------- Opskriftsgrid (1 kolonne på mobil) ---------- */
@@ -169,12 +69,9 @@ a {
   outline: 3px solid var(--maroon);
   outline-offset: 3px;
 }
+
 /* ---------- desktop ---------- */
 @media (min-width: 768px) {
-  body {
-    padding: 0.75rem;
-  }
-
   .logo {
     font-size: 2.25rem;
   }
@@ -192,19 +89,10 @@ a {
   }
 
   .title-main {
-    font-size: 5rem;
-  }
-  .title-sub {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .recipe-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
   }
 }
